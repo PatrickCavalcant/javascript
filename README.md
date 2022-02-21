@@ -4,8 +4,8 @@
 
 Repositório responsável por armazenamento de códigos de apoio JavaScript
 
-<a href="https://github.com/PatrickCavalcant/fluig/tree/main/LiberacaoOrcamento"><h3>Assinatura</h3></a>
+<a href="https://github.com/PatrickCavalcant/javascript/tree/main/assinatura-manual"><h3>Assinatura</h3></a>
 <p align="center">
-    <img src="img/assinaturaes.png" width="200">
+    <img src="img/assinaturas.png" width="200">
 </p>
 
