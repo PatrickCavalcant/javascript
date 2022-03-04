@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Mapas</title>
+
+	<!- Importe da biblioteca leaflet(platagem de mapa)->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" /> 
+	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>	
+	
+	
+	
+</head>
+<body>
+
+
+
+<div id="map" style="width: 1350px; height: 640px;"></div>
+<script>
+
+	var 
+		// Utiliza a camada do mapa por rua ou por satelide
+		mbUrl1= 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaGVucmlwZmYiLCJhIjoiY2pvNHE4b2VzMDI5ZTNwb2MyNXBxdHppMCJ9.3oM1-lAM6KE_xOZGFelmFw',
+	    mbUrl2 = 'http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}';
+
+		var maparua  = L.tileLayer(mbUrl1, {id: 'mapbox.streets', maxZoom: 20}),
+        mapasatelite  = L.tileLayer(mbUrl2, {subdomains:['mt0','mt1','mt2','mt3'], maxZoom: 20});
+		
+		// Determina o centro do mapa
+		var map = L.map('map', {
+			center: [-16.252768,-47.917893], 
+			zoom: 13,
+			layers: [maparua, mapasatelite]
+		});
+
+		var baseLayers = {
+			"Rua": maparua,
+			"Sat&eacutelite": mapasatelite
+		};
+
+		L.control.layers(baseLayers).addTo(map);
+		
+		
+		// Cria um ponto
+		var marker = L.marker([-16.2539604,-47.9588557]).addTo(map);
+		// Add um texto no ponto
+		marker.bindPopup("<b>Distribuidora Tubarão</b>");
+
+
+		// Cria um circulo
+		var circle = L.circle([-16.2441148,-47.9621947], {
+    		color: 'red',
+    		fillColor: '#f03',
+    		fillOpacity: 0.5,
+    		radius: 100
+		}).addTo(map);
+		circle.bindPopup("IFG - Campus Luziania");
+
+		// Cria um poligono ligando os pontos
+		var polygon = L.polygon([
+    		[-16.245588, -47.941754],
+    		[-16.246279, -47.940294],
+    		[-16.247525, -47.941172],
+			[-16.246738, -47.942392]
+		]).addTo(map);
+		polygon.bindPopup("Eu sou um poligono");
+		
+
+</script>
+
+
+
+</body>
+
+</html>
