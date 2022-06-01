@@ -19,6 +19,11 @@ Mascaras de jQuery Mask Plugin do autor Igor Escobar
   <p align="center">
     <img src="img/mask.png" width="200">
   </p>
+  
+<a href="https://github.com/PatrickCavalcant/javascript/tree/main/subtrair-somar-data-tempo"><h3>Subtrair e Somar Data e Tempo</h3></a>
+  <p align="center">
+    <img src="img/date.png" width="200">
+  </p>
     
     
 
