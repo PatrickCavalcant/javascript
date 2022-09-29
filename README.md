@@ -24,6 +24,13 @@ Mascaras de jQuery Mask Plugin do autor Igor Escobar
   <p align="center">
     <img src="img/date.png" width="200">
   </p>
-    
-    
+  
+  
+<h3>Converte datas</h3>
+
+```
+var tempo = datasetProcessTask['values'][0]['endDate'] //Data em milisegundo 1645717317752
+date = new Date(tempo); //Converte para 'Thu Feb 24 2022 12:41:57 GMT-0300 (Horário Padrão de Brasília)'
+new Intl.DateTimeFormat('pt-BR').format(date) //Converte para 24/02/2022
+```    
 
