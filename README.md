@@ -1,8 +1,17 @@
-# javascript
+# Javascript
 [![author](https://img.shields.io/badge/author-patrick-red.svg)](https://www.linkedin.com/in/patrick-cavalcante-moraes-a95635179/)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/PatrickCavalcant)
 
 Repositório responsável por armazenamento de códigos de apoio JavaScript
+
+
+# Consumo de API usando Javascript
+
+| #  | Projeto | 
+| --- | ------ | 
+| 1. | Consumir uma API de CEP e preencher um formulário como as informações do endereço. | 
+| 2. | Consumir uma API de imagens e criar uma pesquisa retornando uma galeria com as imagens. |
+
 
 <a href="https://github.com/PatrickCavalcant/javascript/tree/main/assinatura-manual"><h3>Assinatura</h3></a>
 <p align="center">
