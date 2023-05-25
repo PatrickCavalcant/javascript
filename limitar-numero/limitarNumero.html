@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+  
+<head>
+    <title>
+        Limitar um número entre um valor mínimo/máximo
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+</head>
+  
+<body style="text-align:center;">
+    <h1 style="color:green;">  
+        Limitar Número  
+    </h1>
+    <p id="GFG_UP">
+    </p>
+    
+	Digite um número:
+    <input id="num" onclick="GFG_Fun(this)"/>
+    <br>
+    <br>
+    <button onclick="GFG_Fun();">Clique aqui </button>
+	
+    <p id="GFG_DOWN" style="color: green;">
+	
+    </p>
+    <script>
+        var up = document.getElementById('GFG_UP');
+        var down = document.getElementById('GFG_DOWN');
+        up.innerHTML = 
+          "Clique no botão para verificar se o número dos tipos"+
+          " está dentro do alcance ou não.<br>Valor mínimo - 0 <br> Valor máximo - 100";
+  
+        function GFG_Fun() {
+            var input = document.getElementById('num');
+            var n = input.value;
+            n = Number(n);
+            if (n < 0) {
+                $('#GFG_DOWN').html('Digite o número entre 0-100');
+                input.value = 0;
+            } else if (n > 100) {
+                $('#GFG_DOWN').html('Digite o número entre 0-100');
+                input.value = 100;
+            } else {
+                $('#GFG_DOWN').html('Você digitou o número válido.');
+                input.value = n;
+            }
+        }
+    </script>
+</body>
+  
+</html>
